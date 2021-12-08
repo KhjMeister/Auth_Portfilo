@@ -1,0 +1,28 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/profile" routerLinkActive="active" *ngIf="loggedInn">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/works" routerLinkActive="active" *ngIf="loggedInn">Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/leassens" routerLinkActive="active" *ngIf="loggedInn">Lessens</a>
+          </li>
+          
+         
+          
+        </ul>
+        <li class="navbar-nav nav-item">
+            <a class="nav-link "  routerLink="login" routerLinkActive="active" *ngIf="!loggedInn">Login</a>
+            <a class="nav-link "  href="#" (click)="logout($event)"  *ngIf="loggedInn">LogOut</a>
+           
+          </li>
+      </div>
+    </div>
+  </nav>

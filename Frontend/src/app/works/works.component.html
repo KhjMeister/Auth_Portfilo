@@ -1,0 +1,102 @@
+<app-sidbar></app-sidbar>
+
+
+
+
+<section id="portfolio" class="portfolio section-bg">
+  <div class="container">
+
+    <ejs-tab id="tab_default" heightAdjustMode='Auto'>
+      <e-tabitems>
+          <e-tabitem [header]="headerText[0]">
+              <ng-template #content>
+
+                  <br>
+                  <br>
+                  <div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" style="position: relative; height: 822.75px;">
+                    <div class="col-lg-12 control-section card-control-section basic_card_layout">
+                      <div class="e-sample-resize-container e-card-resize-container">
+                          <div class='row'>
+                              <div class="row card-layout">
+                                  <div *ngFor="let item of allWoorks" class="col-xs-4 col-sm-4 col-lg-4 col-md-4">
+                                      <div tabindex="0" class="e-card" id="basic_card">
+                                          <div class="e-card-header">
+                                              <div class="e-card-header-caption">
+                                                  <div class="e-card-header-title">{{ item.name }}</div>
+                                                  <div class="e-card-sub-title">By kj  | Jan 20, 2021 </div>
+                                              </div>
+                                          </div>
+                                          <div class="e-card-content">
+                                              
+                                          </div>
+                                          <div class="e-card-actions">
+                                              <a href="subwork/{{item.id}}" class="e-btn e-outline e-primary">
+                                                  Read 
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                 
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                    
+                  </div>
+            
+               
+
+              </ng-template>
+          </e-tabitem>
+          <e-tabitem [header]="headerText[1]" >
+              <ng-template #content>
+                
+                  <br>
+                  <br>
+                  <div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" style="position: relative; height: 822.75px;">
+                    <div *ngFor="let item1 of CWoorks" class="col-lg-4 col-md-6 portfolio-item filter-app" >
+                      <div class="portfolio-wrap">
+                        <div class="item-witdh">{{ item1.name }}</div>
+                        <div class="portfolio-links">
+                          <a href="addSubwork/{{item1.id}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                          <a href="subwork/{{item1.id}}" title="More Details">info</a>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+            
+                
+
+              </ng-template>
+          </e-tabitem>
+          <e-tabitem [header]="headerText[2]">
+              <ng-template #content>
+                <br>
+                <br>
+                <div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" style="position: relative; height: 822.75px;">
+                  <div *ngFor="let item2 of LWoorks" class="col-lg-4 col-md-6 portfolio-item filter-app" >
+                    <div class="portfolio-wrap">
+                      <div class="item-witdh">{{ item2.name }}</div>
+                      <div class="portfolio-links">
+                        <a href="addSubwork/{{item2.id}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                        <a href="subwork/{{item2.id}}" title="More Details">info</a>
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+              </ng-template>
+          </e-tabitem>
+
+          <e-tabitem [header]="headerText[3]">
+            <ng-template #content>
+              <br>
+              <br>
+              بلللبل
+            </ng-template>
+        </e-tabitem>
+      </e-tabitems>
+    
+  </ejs-tab>
+
+</div>
+  </section>

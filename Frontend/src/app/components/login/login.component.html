@@ -1,0 +1,47 @@
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-4">
+             <div class="section-title" >
+          <h2 >Login</h2>
+          <p>login to your acount.</p>
+        </div>
+          </div>
+        </div>
+        <div class="row" >
+            
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+            
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit()" role="form" class="php-email-form" dir="rtl">
+              <div class="alert alert-danger" [hidden]="!error">
+                {{ error }}
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" [(ngModel)]="form.email" id="email" class="form-control"   required>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" [(ngModel)]="form.password" class="form-control" id="password"  required>
+              </div>
+               
+              <div class="text-center"><button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button></div>
+              <br>
+              <div class="text-center">
+                <a class="btn btn-info" routerLink="/signup" >SignUp</a>&nbsp;
+                <a class="btn btn-info" routerLink="/request-password-reset" >Resset Password</a>
+              </div>
+              
+            </form>
+            
+          </div>
+
+        </div>
+
+      </div>
+    </section>

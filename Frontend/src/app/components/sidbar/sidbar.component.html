@@ -1,0 +1,28 @@
+<header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="#" routerLink="/profile" routerLinkActive="active">KJ Meister</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a  class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a  class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a  class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a  class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a  class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#" routerLink="/profile" routerLinkActive="active"  class="nav-link scrollto " *ngIf="loggedInn"><i class="bx bx-user"></i> <span>Profile</span></a></li>
+          <li><a href="#" routerLink="/works" routerLinkActive="active"  class="nav-link scrollto" *ngIf="loggedInn"><i class="bx bx-book-content"></i> <span>Works</span></a></li>
+          <li><a href="#" routerLink="/leassens" routerLinkActive="active" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Leassens</span></a></li>
+          <!-- 
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
+          <li><a href="#" (click)="logout($event)"  *ngIf="loggedInn" class="nav-link scrollto"><i class="bx bx-log-out"></i> <span>LogOut</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>

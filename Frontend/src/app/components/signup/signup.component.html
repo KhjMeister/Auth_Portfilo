@@ -1,0 +1,65 @@
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-4">
+             <div class="section-title" >
+          <h2 >Sign Up</h2>
+          <p>Make  your acount.</p>
+        </div>
+          </div>
+        </div>
+        <div class="row" >
+            
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+            
+            <form #signUPForm="ngForm" (ngSubmit)="onSubmit()" role="form" class="php-email-form" dir="rtl">
+
+             
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" [(ngModel)]="form.name" id="name" class="form-control"   required>
+                <div class="text-danger" [hidden]="!error.name">
+                  {{ error.name }}
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" [(ngModel)]="form.email" id="email" class="form-control"  required>
+                <div class="text-danger" [hidden]="!error.email">
+                  {{ error.email }}
+                </div>
+              </div>
+              
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" [(ngModel)]="form.password" class="form-control" id="password"  required>
+                <div class="text-danger" [hidden]="!error.password">
+                  {{ error.password }}
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="passwordConform">Confirm your Password</label>
+                <input type="password" name="password_confirmation" [(ngModel)]="form.password_confirmation" class="form-control" id="passwordConform"  required>
+              </div>
+               
+              <div class="text-center"><button type="submit" class="btn btn-primary" >Sign Up</button></div>
+              <br>
+              <div class="text-center">
+                <a class="btn btn-info" routerLink="/login" >Login</a>&nbsp;
+                <a class="btn btn-info" routerLink="/request-password-reset" >Resset Password</a>
+              </div>
+             
+            </form>
+            
+          </div>
+
+        </div>
+
+      </div>
+    </section>
